@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main()
+{
+    int valor_produtoI, valor_produtoF, condicao;
+    
+    printf("Digite o valor do produto: \n");
+    scanf("%d", &valor_produtoI);
+    
+    printf("Escolha a forma de pagamento:\n");
+    printf("1-À vista em dinheiro ou cheque\n");
+    printf("2-À vista no cartão de crédito\n");
+    printf("3-Em duas vezes no cartão de crédito\n");
+    scanf("%d", &condicao);
+    
+    if(condicao == 1){
+        valor_produtoF = valor_produtoI*0.90;
+        printf("O valor total e: %d\n",valor_produtoF);
+     }if(condicao == 2){
+        valor_produtoF = valor_produtoI*0.85;
+        printf("O valor total e: %d\n",valor_produtoF);
+     }if(condicao == 3){
+        valor_produtoF = valor_produtoI/2;
+        printf("O valor da parcela ficou em 2 de:%d\n",valor_produtoF);
+     }else{
+        printf("Digite somente numeros entre 1 e 3");
+    }
+
+    return 0;
+}
